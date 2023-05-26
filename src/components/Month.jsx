@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Month.css';
 
 function Month() {
   const [month, setMonth] = useState('');

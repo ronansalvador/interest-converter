@@ -29,11 +29,19 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #c1c1c1;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-align: center;
 }
 
 button {
@@ -66,4 +74,23 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+#root {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  #root {
+    padding: 10px;
+  }
+}
+
+input {
+  /* background-color: green; */
+  padding: 10px;
+  border-radius: 5px;
 }

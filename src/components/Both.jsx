@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Both.css';
 
 function BothButton() {
   const [month, setMonth] = useState('');
@@ -20,28 +21,31 @@ function BothButton() {
   }
 
   return (
-    <>
-      <h1>Converter juros</h1>
-      <p>teste</p>
-      <label htmlFor='juros-mes'>Juros ao Mês:</label>
-      <input
-        type='number'
-        name='juros-mes'
-        id='juros-mes'
-        value={month}
-        onChange={(e) => converterTaxaMensalParaAnual(e.target.value)}
-      />
-      <span>% a.m</span>
-      <label htmlFor='juros-ano'>Juros ao Ano:</label>
-      <input
-        type='number'
-        name='juros-ano'
-        id='juros-ano'
-        value={year}
-        onChange={(e) => converterTaxaAnualParaMensal(e.target.value)}
-      />
-      <span>% a.a</span>
-    </>
+    <section>
+      <h2>Converter juros</h2>
+      <h3>preencha a opção desejada</h3>
+
+      <div className='div-juros'>
+        <label htmlFor='juros-mes'>Juros ao Mês:</label>
+        <input
+          type='number'
+          name='juros-mes'
+          id='juros-mes'
+          value={month}
+          onChange={(e) => converterTaxaMensalParaAnual(e.target.value)}
+        />
+      </div>
+      <div className='div-juros'>
+        <label htmlFor='juros-ano'>Juros ao Ano:</label>
+        <input
+          type='number'
+          name='juros-ano'
+          id='juros-ano'
+          value={year}
+          onChange={(e) => converterTaxaAnualParaMensal(e.target.value)}
+        />
+      </div>
+    </section>
   );
 }
 

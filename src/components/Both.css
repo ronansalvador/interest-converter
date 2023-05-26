@@ -1,0 +1,28 @@
+.div-juros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+
+.div-juros input {
+  width: 75%;
+}
+
+.div-juros label {
+  width: 75%;
+  text-align: center;
+}
+
+.div-juros span {
+  width: 15%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}

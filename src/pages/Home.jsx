@@ -1,15 +1,15 @@
 import Both from '../components/Both';
-import Month from '../components/Month';
-import Year from '../components/Year';
+// import Month from '../components/Month';
+// import Year from '../components/Year';
+import './Home.css';
 
 function Home() {
   return (
-    <>
-      <h1>Home</h1>
-      <Month />
-      <Year />
+    <main>
+      {/* <Month />
+      <Year /> */}
       <Both />
-    </>
+    </main>
   );
 }
 
