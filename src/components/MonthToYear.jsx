@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Both.css';
+import './MonthToYear.css';
 
 function BothButton() {
   const [month, setMonth] = useState('');

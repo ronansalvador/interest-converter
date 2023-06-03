@@ -1,6 +1,4 @@
-import Both from '../components/Both';
-// import Month from '../components/Month';
-// import Year from '../components/Year';
+import MonthToYear from '../components/MonthToYear';
 import './Home.css';
 
 function Home() {
@@ -8,7 +6,7 @@ function Home() {
     <main>
       {/* <Month />
       <Year /> */}
-      <Both />
+      <MonthToYear />
     </main>
   );
 }
