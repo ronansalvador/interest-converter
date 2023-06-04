@@ -22,10 +22,9 @@ function BothButton() {
 
   return (
     <section>
-      <h2>Converter juros</h2>
-      <h3>preencha a opção desejada</h3>
-
       <div className='div-juros'>
+        <h2>Converter juros</h2>
+        <h3>preencha a opção desejada</h3>
         <label htmlFor='juros-mes'>Juros ao Mês:</label>
         <input
           type='number'

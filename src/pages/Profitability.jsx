@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Profitability.css';
 
 function Profitability() {
   const [inicial, setInicial] = useState('');
@@ -49,49 +50,69 @@ function Profitability() {
   };
 
   return (
-    <>
+    <section className='container-profitability'>
       <h1>Rentabilidade</h1>
       <label htmlFor='inicial'>Quanto você tem hoje para investir?</label>
-      <input
-        type='number'
-        id='inicial'
-        name='inicial'
-        value={inicial}
-        onChange={(e) => setInicial(Number(e.target.value))}
-      />
+      <div className='input-money'>
+        <span>R$</span>
+        <input
+          type='number'
+          id='inicial'
+          name='inicial'
+          step='0.01'
+          min='0'
+          placeholder='0,00'
+          value={inicial}
+          onChange={(e) => setInicial(Number(e.target.value))}
+        />
+      </div>
       <label htmlFor='mensal'>Aplicação mensal</label>
-      <input
-        type='number'
-        id='mensal'
-        name='mensal'
-        value={mensal}
-        onChange={(e) => setMensal(Number(e.target.value))}
-      />
+      <div className='input-money'>
+        <span>R$</span>
+        <input
+          type='number'
+          id='mensal'
+          name='mensal'
+          placeholder='0,00'
+          value={mensal}
+          onChange={(e) => setMensal(Number(e.target.value))}
+        />
+      </div>
       <label htmlFor='tempo'>Por quanto tempo?</label>
-      <input
-        type='number'
-        id='tempo'
-        name='tempo'
-        value={tempo}
-        onChange={(e) => setTempo(Number(e.target.value))}
-      />
+      <div className='input-number'>
+        <input
+          type='number'
+          id='tempo'
+          name='tempo'
+          placeholder='Digite o número'
+          value={tempo}
+          onChange={(e) => setTempo(Number(e.target.value))}
+        />
+        <span>Meses</span>
+      </div>
       <label htmlFor='rentabilidade'>Rentabilidade</label>
-      <input
-        type='number'
-        id='rentabilidade'
-        name='rentabilidade'
-        value={rentabilidade}
-        onChange={(e) => setRentabilidade(Number(e.target.value))}
-      />
-      <select
-        name='rentabilidade-periodo'
-        id='rentabilidade-periodo'
-        value={periodo}
-        onChange={(e) => setPeriodo(e.target.value)}
-      >
-        <option value='mes'>ao mes</option>
-        <option value='ano'>ao ano</option>
-      </select>
+      <div className='div-rentabilidade'>
+        <div className='input-number'>
+          <input
+            type='number'
+            id='rentabilidade'
+            name='rentabilidade'
+            placeholder='0,00'
+            value={rentabilidade}
+            onChange={(e) => setRentabilidade(Number(e.target.value))}
+          />
+          <span>%</span>
+        </div>
+        <select
+          name='rentabilidade-periodo'
+          id='rentabilidade-periodo'
+          value={periodo}
+          onChange={(e) => setPeriodo(e.target.value)}
+        >
+          <option value='mes'>ao mes</option>
+          <option value='ano'>ao ano</option>
+        </select>
+      </div>
       <button
         type='button'
         onClick={() => {
@@ -111,7 +132,7 @@ function Profitability() {
       <p>{`O valor total acumlado é de R$: ${converterParaReal(
         valorAcumulado,
       )}`}</p>
-    </>
+    </section>
   );
 }
 
