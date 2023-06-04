@@ -1,5 +1,6 @@
 import MonthToYear from '../components/MonthToYear';
 import './Home.css';
+import Profitability from './Profitability';
 
 function Home() {
   return (
@@ -7,6 +8,7 @@ function Home() {
       {/* <Month />
       <Year /> */}
       <MonthToYear />
+      <Profitability />
     </main>
   );
 }
