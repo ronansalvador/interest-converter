@@ -57,17 +57,16 @@ input[type='number'] {
   font-size: 1.2em;
   padding: 13px 10px;
   border-radius: 15px 0 0 15px;
+  width: 50%;
 }
 .div-rentabilidade {
   display: flex;
   justify-content: center;
-  gap: 30px;
   width: 80%;
 }
 
 select {
   border-radius: 15px;
-  width: 20%;
   padding: 10px;
 }
 
