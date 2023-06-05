@@ -100,7 +100,6 @@ function Profitability() {
                     type='number'
                     id='inicial'
                     name='inicial'
-                    step='0.01'
                     min='0'
                     placeholder='0,00'
                     value={inicial}
