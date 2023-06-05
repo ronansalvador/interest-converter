@@ -128,9 +128,7 @@ function Profitability() {
         <button
           type='button'
           onClick={() => {
-            // rentabilidadeMesnal();
             calcularRentabilidade();
-            console.log(inicial, mensal, tempo, rentabilidade, periodo);
           }}
         >
           Calcular
