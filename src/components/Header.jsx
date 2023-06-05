@@ -4,7 +4,7 @@ import './Header.css';
 function Header() {
   return (
     <header>
-      <Link to='/rentabilidade'>Rentabilidade</Link>
+      <Link to='/rentabilidade'>Calculadora de Juros Compostos</Link>
 
       <Link to='/'>Converter juros</Link>
     </header>

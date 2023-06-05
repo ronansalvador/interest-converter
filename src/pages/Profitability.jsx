@@ -86,7 +86,7 @@ function Profitability() {
     <>
       <Header />
       <section className='container-profitability'>
-        <h2>Rentabilidade</h2>
+        <h2>Simulador de Juros Compostos</h2>
         <>
           {showResult === false ? (
             <>

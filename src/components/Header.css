@@ -17,8 +17,10 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 40%;
+  text-align: center;
 }
 
 a:hover {
-  color: white;
+  scale: 1.1;
 }
