@@ -4,10 +4,13 @@
   align-items: center;
   gap: 5px;
   flex-direction: column;
+  /* background-color: blue; */
 }
 
 .input-money {
   display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .input-money span {
@@ -17,7 +20,7 @@
   padding: 10px;
   border: 2px solid #f2f2f2;
   background-color: #f2f2f2;
-  color: blue;
+  color: blueviolet;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,6 +30,7 @@
   font-size: 1.2em;
   padding: 13px 10px;
   border-radius: 0 15px 15px 0;
+  width: 100%;
 }
 
 input[type='number']::-webkit-inner-spin-button {
@@ -39,6 +43,7 @@ input[type='number'] {
 
 .input-number {
   display: flex;
+  width: 100%;
 }
 
 .input-number span {
@@ -48,7 +53,7 @@ input[type='number'] {
   padding: 10px;
   border: 2px solid #f2f2f2;
   background-color: #f2f2f2;
-  color: blue;
+  color: blueviolet;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,12 +62,11 @@ input[type='number'] {
   font-size: 1.2em;
   padding: 13px 10px;
   border-radius: 15px 0 0 15px;
-  width: 50%;
 }
 .div-rentabilidade {
   display: flex;
-  justify-content: center;
-  width: 80%;
+  justify-content: start;
+  width: 100%;
 }
 
 select {
@@ -72,4 +76,27 @@ select {
 
 button {
   background-color: blueviolet;
+  width: 50%;
+  height: 50px;
+  color: white;
+}
+
+.teste-ronan {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-tempo {
+  width: 100%;
+}
+
+#rentabilidade {
+  width: 60%;
+}
+
+#rentabilidade-periodo {
+  width: 60%;
 }

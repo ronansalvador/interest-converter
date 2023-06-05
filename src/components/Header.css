@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: white;
+}

@@ -1,10 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
+import MonthToYear from './pages/MonthToYear';
+import Profitability from './pages/Profitability';
 
 function App() {
   return (
     <Routes>
-      <Route path='/' element={<Home />} />
+      <Route path='/' element={<MonthToYear />} />
+      <Route path='/rentabilidade' element={<Profitability />} />
     </Routes>
   );
 }
