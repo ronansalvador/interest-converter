@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './Profitability.css';
 import Header from '../components/Header';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Profitability() {
   const [inicial, setInicial] = useState('');
@@ -11,7 +13,18 @@ function Profitability() {
   const [investimento, setInvestimento] = useState(0);
   const [valorAcumulado, setValorAcumulado] = useState(0);
   const [showResult, setShowResult] = useState(false);
-  const [error, setError] = useState('');
+
+  const showToastSuccess = (mensagem) => {
+    toast.success(mensagem, {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+
+  const showToastError = (mensagem) => {
+    toast.error(mensagem, {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
 
   const converterParaReal = (valor) => {
     return valor.toLocaleString('pt-BR', {
@@ -21,7 +34,6 @@ function Profitability() {
   };
 
   const rentabilidadeMensal = () => {
-    setError('');
     const acumulado =
       inicial * Math.pow(1 + rentabilidade / 100, tempo) +
       mensal *
@@ -32,11 +44,11 @@ function Profitability() {
     setInvestimento(investido);
 
     setValorAcumulado(acumulado);
+    showToastSuccess('Calculando com juros mensais');
     setShowResult(true);
   };
 
   const rentabilidadeAnual = () => {
-    setError('');
     const taxaAnual = rentabilidade / 100;
     let taxaMensal = ((Math.pow(1 + taxaAnual, 1 / 12) - 1) * 100).toFixed(2);
 
@@ -48,19 +60,22 @@ function Profitability() {
     const investido = inicial + mensal * tempo;
     setInvestimento(investido);
     setValorAcumulado(acumulado);
+    showToastSuccess('Calculando com juros anuais');
     setShowResult(true);
   };
 
   const calcularRentabilidade = () => {
     if (inicial === '' && mensal === '') {
-      return setError('Valor inicial e valor mensal não podem ser vazios');
+      return showToastError(
+        'Valor inicial e valor mensal não podem ser vazios',
+      );
     }
     if (!tempo) {
-      return setError('Tempo não pode ser vazio');
+      return showToastError('Tempo não pode ser vazio');
     }
 
     if (!rentabilidade) {
-      return setError('Rentabilidade não pode ser vazio');
+      return showToastError('Rentabilidade não pode ser vazio');
     }
 
     if (periodo === 'mes') rentabilidadeMensal();
@@ -157,14 +172,14 @@ function Profitability() {
               >
                 Calcular
               </button>
-              {error && <p className='error'>{error}</p>}
+              {/* {error && <p className='error'>{error}</p>} */}
             </>
           ) : (
             <>
               <p>{`O valor total investido é de R$: ${converterParaReal(
                 investimento,
               )}`}</p>
-              <p>{`Juros Ganhos No Período Com Juros Compostos R$: ${converterParaReal(
+              <p>{`Juros Ganhos No Período R$: ${converterParaReal(
                 valorAcumulado - investimento,
               )}`}</p>
               <p>{`O valor total acumlado é de R$: ${converterParaReal(
@@ -182,6 +197,7 @@ function Profitability() {
             </>
           )}
         </>
+        <ToastContainer />
       </section>
     </>
   );
