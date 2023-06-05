@@ -55,7 +55,7 @@ function Profitability() {
       <Header />
       <section className='container-profitability'>
         <h1>Rentabilidade</h1>
-        <div className='teste-ronan'>
+        <div className='div-label-input'>
           <label htmlFor='inicial'>Quanto você tem hoje para investir?</label>
           <div className='input-money'>
             <span>R$</span>
