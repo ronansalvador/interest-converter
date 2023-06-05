@@ -21,13 +21,15 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #c1c1c1;
+  background-color: #3e3e3e;
 }
 
 h1,
 h2,
-h3 {
+h3,
+label {
   text-align: center;
+  color: white;
 }
 
 h1 {

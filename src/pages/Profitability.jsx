@@ -176,15 +176,15 @@ function Profitability() {
             </>
           ) : (
             <>
-              <p>{`O valor total investido é de R$: ${converterParaReal(
+              <h3>{`O valor total investido é de R$: ${converterParaReal(
                 investimento,
-              )}`}</p>
-              <p>{`Juros ganhos no período R$: ${converterParaReal(
+              )}`}</h3>
+              <h3>{`Juros ganhos no período R$: ${converterParaReal(
                 valorAcumulado - investimento,
-              )}`}</p>
-              <p>{`O valor total acumlado é de R$: ${converterParaReal(
+              )}`}</h3>
+              <h3>{`O valor total acumlado é de R$: ${converterParaReal(
                 valorAcumulado,
-              )}`}</p>
+              )}`}</h3>
 
               <button
                 type='button'
