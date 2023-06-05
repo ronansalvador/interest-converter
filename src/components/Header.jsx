@@ -4,14 +4,9 @@ import './Header.css';
 function Header() {
   return (
     <header>
-      <ul>
-        <li>
-          <Link to='/rentabilidade'>Rentabilidade</Link>
-        </li>
-        <li>
-          <Link to='/'>Converter juros</Link>
-        </li>
-      </ul>
+      <Link to='/rentabilidade'>Rentabilidade</Link>
+
+      <Link to='/'>Converter juros</Link>
     </header>
   );
 }

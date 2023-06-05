@@ -86,7 +86,7 @@ function Profitability() {
     <>
       <Header />
       <section className='container-profitability'>
-        <h1>Rentabilidade</h1>
+        <h2>Rentabilidade</h2>
         <>
           {showResult === false ? (
             <>
@@ -179,7 +179,7 @@ function Profitability() {
               <p>{`O valor total investido é de R$: ${converterParaReal(
                 investimento,
               )}`}</p>
-              <p>{`Juros Ganhos No Período R$: ${converterParaReal(
+              <p>{`Juros ganhos no período R$: ${converterParaReal(
                 valorAcumulado - investimento,
               )}`}</p>
               <p>{`O valor total acumlado é de R$: ${converterParaReal(
