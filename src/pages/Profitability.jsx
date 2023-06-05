@@ -71,7 +71,7 @@ function Profitability() {
             />
           </div>
         </div>
-        <div className='teste-ronan'>
+        <div className='div-label-input'>
           <label htmlFor='mensal'>Aplicação mensal</label>
           <div className='input-money'>
             <span>R$</span>
@@ -85,7 +85,7 @@ function Profitability() {
             />
           </div>
         </div>
-        <div className='teste-ronan'>
+        <div className='div-label-input'>
           <label htmlFor='tempo'>Por quanto tempo?</label>
           <div className='input-number'>
             <input
@@ -100,7 +100,7 @@ function Profitability() {
             <span>Meses</span>
           </div>
         </div>
-        <div className='teste-ronan'>
+        <div className='div-label-input'>
           <label htmlFor='rentabilidade'>Rentabilidade</label>
           <div className='div-rentabilidade'>
             <div className='input-number'>
