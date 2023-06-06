@@ -1,4 +1,4 @@
-# Conversor de Juros mensais e anuais
+# Conversor de Juros e Simulador de Juros Compostos
 
 
 - Clone o projeto
